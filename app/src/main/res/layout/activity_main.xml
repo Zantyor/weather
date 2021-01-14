@@ -47,15 +47,29 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/ButtonHomeScreen1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            style="@style/ButtonDefault"
             android:text="@string/home_button_screen_1"/>
 
         <Button
+            android:id="@+id/ButtonHomeScreen2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
             android:text="@string/home_button_screen_2"/>
 
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ImageViewHomeMeteoFranceLogo"
+        android:layout_width="260dip"
+        android:layout_height="100dip"
+        android:src="@drawable/meteo_france_logo"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        />
 
 </RelativeLayout>
