@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.weather_2">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Weather2">
-        <activity android:name=".WebViewMeteoFranceActivity"></activity>
+        <activity android:name=".UmbrellaActivity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.weather_2.MainActivity"/>
+        </activity>
+        <activity android:name=".WebViewMeteoFranceActivity" />
         <activity android:name=".WeatherActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -20,5 +28,4 @@
         </activity>
     </application>
 
-    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>

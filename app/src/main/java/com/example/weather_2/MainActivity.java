@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private String firstName = "Julian";
+    private String firstName = "Côme";
     private TextView mTextViewHomeGreeting;
     private ImageView mImageViewHomeMeteoFranceLogo;
     public static String MESSAGE_KEY = "hello";
@@ -36,6 +36,18 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button mButtonHomeScreen2 = findViewById(R.id.ButtonHomeScreen2);
+        mButtonHomeScreen2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                mTextViewHomeGreeting.setTextColor(getResources().getColor(R.color.purple_200, getResources().newTheme()));
+                Intent intent = new Intent(MainActivity.this, UmbrellaActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
 
         mImageViewHomeMeteoFranceLogo = findViewById(R.id.ImageViewHomeMeteoFranceLogo);
         mImageViewHomeMeteoFranceLogo.setOnClickListener(new View.OnClickListener() {
