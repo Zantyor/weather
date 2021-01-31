@@ -48,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
         mImageViewHomeMeteoFranceLogo = findViewById(R.id.ImageViewHomeMeteoFranceLogo);
         mImageViewHomeMeteoFranceLogo.setOnClickListener(new View.OnClickListener() {
             @Override

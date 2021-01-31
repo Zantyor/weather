@@ -62,8 +62,7 @@ public class WeatherActivity extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();
         Log.v(Config.LOG_TAG, actionBar != null ? "actionBar not null" : "actionBar null");
-        if (actionBar != null)
-        {
+        if (actionBar != null) {
             actionBar.setHomeButtonEnabled(true);
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
@@ -97,7 +96,7 @@ public class WeatherActivity extends AppCompatActivity {
                 }
                 View focusedView = WeatherActivity.this.getCurrentFocus();
                 if (focusedView != null) {
-                    InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                    InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                     imm.hideSoftInputFromWindow(focusedView.getWindowToken(), 0);
                 }
             }
@@ -131,8 +130,8 @@ public class WeatherActivity extends AppCompatActivity {
 
                     @Override
                     public void onResponse(JSONObject response) {
-                            storeInCache(response);
-                            updateUI(response);
+                        storeInCache(response);
+                        updateUI(response);
                     }
                 }, new Response.ErrorListener() {
 
@@ -207,7 +206,7 @@ public class WeatherActivity extends AppCompatActivity {
         }
         try {
             response = new JSONObject(contents);
-        }catch (JSONException err){
+        } catch (JSONException err) {
             Log.d("Error", err.toString());
         }
         return response;
